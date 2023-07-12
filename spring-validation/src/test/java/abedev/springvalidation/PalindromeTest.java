@@ -27,4 +27,14 @@ public class PalindromeTest {
             Assertions.assertFalse(violationSet.isEmpty());
             Assertions.assertEquals(1,violationSet.size());
       }
+
+      @Test
+      void palindromeInvalidMessage() {
+            Set<ConstraintViolation<Foo>> violationSet = validator.validate(new Foo("fajar"));
+            Assertions.assertFalse(violationSet.isEmpty());
+            Assertions.assertEquals(1,violationSet.size());
+            String message = violationSet.stream().findFirst().get().getMessage();
+            Assertions.assertEquals("Data bukan palindrome",message);
+
+      }
 }
