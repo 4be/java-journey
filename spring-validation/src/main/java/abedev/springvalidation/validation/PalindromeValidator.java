@@ -1,7 +1,6 @@
 package abedev.springvalidation.validation;
 
 import abedev.springvalidation.helper.StringHelper;
-import jakarta.validation.Constraint;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import org.springframework.beans.factory.annotation.Autowired;
